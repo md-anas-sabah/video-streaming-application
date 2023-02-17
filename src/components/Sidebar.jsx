@@ -12,7 +12,40 @@ import { useSelector } from "react-redux";
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
-  if (!isMenuOpen) return null; // Early Return pattern
+  if (!isMenuOpen)
+    return (
+      <div className="p-6 shadow w-24 h-screen">
+        <ul className="flex flex-col gap-4 mt-6">
+          <li className="">
+            <WhatshotIcon fontSize="large" />
+          </li>
+          <li className="">
+            <MusicNoteIcon fontSize="large" />
+          </li>
+          <li className="">
+            <MovieIcon fontSize="large" />
+          </li>
+          <li className="">
+            <LiveTvIcon fontSize="large" />
+          </li>
+          <li className="">
+            <SportsEsportsIcon fontSize="large" />
+          </li>
+          <li className="">
+            <FeedIcon fontSize="large" />
+          </li>
+          <li className="">
+            <EmojiEventsIcon fontSize="large" />
+          </li>
+          <li className="">
+            <TipsAndUpdatesIcon fontSize="large" />
+          </li>
+          <li className="">
+            <DiamondIcon fontSize="large" />
+          </li>
+        </ul>
+      </div>
+    ); // Early Return pattern
 
   return (
     <div className="p-6 shadow w-60 h-screen">
