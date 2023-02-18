@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   if (!isMenuOpen)
     return (
-      <div className="p-6 shadow w-24 h-screen">
+      <div className="p-6 shadow w-24 h-[53.7rem]">
         <ul className="flex flex-col gap-4 mt-6">
           <li className="">
             <WhatshotIcon fontSize="large" />
