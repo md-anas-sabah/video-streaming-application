@@ -7,7 +7,9 @@ import FeedIcon from "@mui/icons-material/Feed";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import DiamondIcon from "@mui/icons-material/Diamond";
+import HomeIcon from "@mui/icons-material/Home";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -16,6 +18,12 @@ const Sidebar = () => {
     return (
       <div className="p-6 shadow w-24 h-[53.7rem]">
         <ul className="flex flex-col gap-4 mt-6">
+          <Link to="/">
+            <li className="">
+              <HomeIcon fontSize="large" />
+            </li>
+          </Link>
+
           <li className="">
             <WhatshotIcon fontSize="large" />
           </li>
@@ -51,6 +59,13 @@ const Sidebar = () => {
     <div className="p-6 shadow w-60 ">
       <h1 className="font-bold text-2xl font-roboto">Explore</h1>
       <ul className="flex flex-col gap-4 mt-6">
+        <Link to="/">
+          <li className="flex gap-2 font-roboto font-bold text-xl">
+            <HomeIcon fontSize="large" />
+            Home
+          </li>
+        </Link>
+
         <li className="flex gap-2 font-roboto font-bold text-xl">
           <WhatshotIcon fontSize="large" />
           Trending
