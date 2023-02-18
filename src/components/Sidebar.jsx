@@ -48,7 +48,7 @@ const Sidebar = () => {
     ); // Early Return pattern
 
   return (
-    <div className="p-6 shadow w-60 h-screen">
+    <div className="p-6 shadow w-60 ">
       <h1 className="font-bold text-2xl font-roboto">Explore</h1>
       <ul className="flex flex-col gap-4 mt-6">
         <li className="flex gap-2 font-roboto font-bold text-xl">

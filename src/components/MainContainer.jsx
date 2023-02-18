@@ -3,7 +3,7 @@ import VideoContainer from "./VideoContainer";
 
 const MainContainer = () => {
   return (
-    <div className="flex flex-col gap-3  h-[53.7rem] overflow-y-scroll">
+    <div className="flex flex-col flex-1 gap-3 overflow-y-scroll">
       <ButtonList />
       <VideoContainer />
     </div>

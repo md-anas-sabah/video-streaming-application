@@ -4,7 +4,7 @@ const VideoCard = ({ info }) => {
   const { channelTitle, title, thumbnails, publishedAt } = snippet;
 
   return (
-    <div className="flex flex-col w-96  cursor-pointer">
+    <div className="flex flex-col w-[23rem] cursor-pointer">
       <div className="rounded-lg aspect-video overflow-hidden">
         <img
           src={thumbnails.medium.url}
@@ -19,7 +19,7 @@ const VideoCard = ({ info }) => {
           {channelTitle}{" "}
         </li>
         <li className="-mt-1 text-gray-500">
-          {statistics.viewCount} • {publishedAt.slice(0, 10)}
+          {statistics.viewCount} views • {publishedAt.slice(0, 10)}
         </li>
       </ul>
     </div>
