@@ -17,11 +17,11 @@ const buttonList = [
 
 const ButtonList = () => {
   return (
-    <div className="flex ">
+    <div className="flex px-10 ">
       {buttonList.map((button) => {
         return (
           <div className="">
-            <Button name={button} />
+            <Button name={button} key={button} />
           </div>
         );
       })}
