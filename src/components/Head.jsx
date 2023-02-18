@@ -12,7 +12,7 @@ const Head = () => {
 
   return (
     <div className="grid grid-flow-col h-14 shadow items-center sticky top-0 z-50 bg-white">
-      <div className="flex col-span-1 ml-10 gap-4">
+      <div className="flex col-span-1 ml-6 gap-4">
         <MenuIcon
           className="cursor-pointer"
           fontSize="large"
