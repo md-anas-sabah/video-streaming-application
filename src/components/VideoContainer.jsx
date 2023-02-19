@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { YOUTUBE_VIDEOS_API } from "../utils/YoutubeVideoApi";
+import { ShimmerVideoContainer } from "./ShimmerVideoContainer";
 import VideoCard from "./VideoCard";
 
 const VideoContainer = () => {
@@ -16,7 +17,9 @@ const VideoContainer = () => {
     setVideos(json.items);
   };
 
-  return (
+  return videos?.length === 0 ? (
+    <ShimmerVideoContainer />
+  ) : (
     <div className="flex flex-wrap  gap-3 px-10">
       {videos.map((video) => {
         return (
