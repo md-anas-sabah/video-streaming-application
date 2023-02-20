@@ -5,10 +5,10 @@ export const ShimmerVideoContainer = () => {
     <div className="flex flex-wrap gap-3 px-10">
       {Array(12)
         .fill("")
-        .map(() => {
+        .map((index) => {
           return (
             <div className="">
-              <ShimmerVideoCard />;
+              <ShimmerVideoCard key={index} />;
             </div>
           );
         })}
