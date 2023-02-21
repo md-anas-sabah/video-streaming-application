@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [suggestion, setSuggestion] = useState([]);
+  const [suggestion, setSuggestion] = useState([]); 
   const [showSuggestion, setShowSuggestion] = useState(false);
 
   const dispatch = useDispatch();
