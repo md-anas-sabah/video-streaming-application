@@ -2,14 +2,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { YOUTUBE_SEARCH_API } from "../utils/YoutubeVideoApi";
 import { Avatar } from "@mui/material";
 import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/appSlice";
 import { useEffect, useState } from "react";
+import { cacheResult } from "../redux/searchSlice";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [suggestion, setSuggestion] = useState([]); 
+  const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const searchCache = useSelector((store) => store.search);
 
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
@@ -17,18 +19,26 @@ const Head = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => getSearchSuggestion(), 200);
+    const timer = setTimeout(() => {
+      if (searchCache[searchQuery]) {
+        setShowSuggestion(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestion();
+      }
+    }, 200);
+
     return () => {
       clearTimeout(timer);
     };
   }, [searchQuery]);
 
   const getSearchSuggestion = async () => {
-    // console.log(searchQuery);
+    console.log(searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     console.log(json[1]);
     setSuggestion(json[1]);
+    dispatch(cacheResult({ [searchQuery]: json[1] }));
   };
 
   return (
