@@ -1,7 +1,7 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import { YOUTUBE_SEARCH_API } from "../utils/YoutubeVideoApi";
-import { Avatar } from "@mui/material";
-import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+// import { Avatar } from "@mui/material";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/appSlice";
 import { useEffect, useState } from "react";
@@ -49,14 +49,9 @@ const Head = () => {
           fontSize="large"
           onClick={() => toggleMenuHandler()}
         />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
-          alt="logo"
-          className="h-8"
-        />
       </div>
-      <div className="flex flex-col col-span-10 ">
-        <div className="flex col-span-10 w-full ">
+      <div className="flex flex-col col-span-10">
+        <div className="flex col-span-10 w-full justify-center ">
           <input
             type="text"
             className="w-3/5 h-10 border border-gray-400 rounded-tl-full rounded-bl-full px-5 focus:outline-none"
@@ -70,7 +65,7 @@ const Head = () => {
           <MagnifyingGlassIcon className="h-10 w-10 px-2 border border-gray-400 bg-gray-300 rounded-tr-full rounded-br-full" />
         </div>
         {showSuggestion && (
-          <div className=" w-3/5  bg-white rounded-xl border border-gray-100 drop-shadow-2xl">
+          <div className="w-3/5  bg-white rounded-xl border border-gray-100 drop-shadow-2xl ml-80">
             <ul className="flex flex-col gap-2 ">
               {suggestion.map((suggest) => {
                 return (
@@ -88,8 +83,8 @@ const Head = () => {
         )}
       </div>
       <div className="flex col-span-1 gap-3">
-        <BellIcon className="h-10 w-10" />
-        <Avatar style={{ height: "30px", width: "30px" }} />
+        {/* <BellIcon className="h-10 w-10" /> */}
+        {/* <Avatar style={{ height: "30px", width: "30px" }} /> */}
       </div>
     </div>
   );
