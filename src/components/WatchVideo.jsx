@@ -15,7 +15,7 @@ const WatchVideo = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="h-[53.7rem] overflow-y-scroll">
       <div className="px-10 py-6">
         <iframe
           width="1000"
