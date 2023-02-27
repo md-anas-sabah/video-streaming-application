@@ -1,4 +1,4 @@
-Video Streaming Application is made by <b>React</b> with <b>TailwindCSS</b> and powered by <b>Redux</b> to manage the global state.
+Video Streaming Application is large scalable, performant,fast loading web application made by <b>React</b> with <b>TailwindCSS</b> and powered by <b>Redux</b> to manage the global state.
  <li>Used <b>Youtube Search API</b> to build search bar</li>
  <li>Used <b>Debouncing</b> to optimise the network calls.</li>
  <li>Used <b>Caching</b> to optimise the search</li>
