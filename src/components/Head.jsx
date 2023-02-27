@@ -1,6 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import { YOUTUBE_SEARCH_API } from "../utils/YoutubeVideoApi";
-// import { Avatar } from "@mui/material";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/appSlice";
