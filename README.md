@@ -3,4 +3,4 @@ Video Streaming Application is large scalable, performant,fast loading web appli
  <li>Used <b>Debouncing</b> to optimise the network calls.</li>
  <li>Used <b>Caching</b> to optimise the search</li>
  <li>Builded <b>Nested Comments</b> using <b>Recursion</b>
-<li>Builded <b>Live Chat Feature</b> using <b>API Polling</b>
+<li>Builded highly performent <b>Live Chat Feature</b> using <b>API Polling</b>
